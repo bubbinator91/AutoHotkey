@@ -20,9 +20,10 @@ return
 Options:
 Gui, Destroy
 Gui, Add, Text,, Number of desktops:
-Gui, Add, Text, W200, WARNING: Please make sure you actually have the same number of desktops actually open, or things may break. If things break, manually navigate to desktop 1 and then press ALT and F11 together to fix things.
+Gui, Add, Text, W200, WARNING: Please make sure you actually have the same number of desktops actually open, or things may break. If things break, manually navigate to desktop 1 and then click the Fix button.
 Gui, Add, Edit, vtotal_desktops ym, %total_desktops%
 Gui, Add, Button, default, OK
+Gui, Add, Button,, Fix
 Gui, Add, Button,, Quit
 Gui, Show,, Desktop Options
 return
@@ -30,6 +31,13 @@ return
 GuiClose:
 ButtonOK:
 Gui, Submit
+return
+
+ButtonFix:
+Loop, 100 {
+	Send ^#{Left}
+}
+current_desktop := 1
 return
 
 ButtonQuit:
