@@ -23,6 +23,6 @@ sleep 50
 WinClose,Sound
 return
 
-; ALT-F11. Exits the script.
-!F11:
+; ALT-F9. Exits the script.
+!F9:
 ExitApp
