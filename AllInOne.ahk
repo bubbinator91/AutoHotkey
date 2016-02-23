@@ -11,6 +11,11 @@ mouse_window_control := ""
 
 ; Hotkeys
 
+; Left Alt-F1. Types out a commonly used phrase, like a password or something.
+<!F1::
+Send {Raw}Hello, world!
+return
+
 ; WIN-Left CTRL. Switches to the desktop to the left.
 #LCtrl::
 Send ^#{Left}
